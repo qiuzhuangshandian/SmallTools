@@ -1,3 +1,4 @@
+//字符串转数字
 #include<stdio.h>
 #include<stdlib.h>
 #include<limits.h>
