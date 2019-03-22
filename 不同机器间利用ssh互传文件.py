@@ -52,8 +52,8 @@ ssh = SSHConnection(ip,port,user,password)
 ssh.connect()
 r1 = ssh.cmd('df')
 local_files = ["main.cpp",
-         "src\CctpMdSpi.cpp",
-        "src\CctpMdSpi.h"]
+         "src/CctpMdSpi.cpp",
+        "src/CctpMdSpi.h"]
 
 remote_file_pre = "/home/ubuntu/"
 file_path = "projects/investment/code_by_hai/"
@@ -65,4 +65,6 @@ for local_file in local_files:
     print(local_file+" upload ok!")
 print("*"*60)
 print("upload over!")
+result = ssh.cmd("ls "+remote_file_pre+file_path)
+print(result.decode("utf-8").split("\n"))
 ssh.close()
