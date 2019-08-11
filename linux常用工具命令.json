@@ -2,5 +2,5 @@
 "1、开启rdesktop":"rdesktop -a 16 -g 1900x1030 -u john 172.31.71.137"
 "2、scp传输文件":"scp -rp sourcedir targetdir (比如：scp -rp 172.31.237.221:/home/hai/HaiYangProjects .  将远端文件夹拷贝到本地，若是拷贝文件 \
 		scp -p sourcedir targetdir)"
-
+"3"、rsync同步目录 rsync -av –exclude “dir”  source_dir target_dir
 }
